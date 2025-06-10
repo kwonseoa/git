@@ -91,7 +91,7 @@ header.active {
   letter-spacing: -1px;
 }
 
-.visual .mainText {
+.visual .main_text {
   font-size: 140px;
   font-weight: 400;
   line-height: 1.2;
@@ -99,11 +99,11 @@ header.active {
   display: inline-block;
 }
 
-.visual .mainText p {
+.visual .main_text p {
   overflow: hidden;
 }
 
-.visual .subText {
+.visual .sub_text {
   margin-left: 20%;
 }
 
@@ -122,26 +122,26 @@ header.active {
 }
 
 /* visual 애니메이션 */
-.visual.motion .mainText {
+.visual.motion .main_text {
   transform: translate3d(0, 0, 0) skewY(0deg);
   overflow: hidden;
 }
 
-.visual.motion .mainText p span {
+.visual.motion .main_text p span {
   display: block;
   animation-name: textAni;
   animation-duration: 1.8s;
 }
 
-.visual.motion .mainText p:nth-child(2) span {
+.visual.motion .main_text p:nth-child(2) span {
   animation-duration: 1.7s;
 }
 
-.visual.motion .mainText p:nth-child(3) span {
+.visual.motion .main_text p:nth-child(3) span {
   animation-duration: 1.5s;
 }
 
-.visual.motion .subText {
+.visual.motion .sub_text {
   animation-name: textAni2;
   animation-duration: 2.3s;
 }
@@ -280,6 +280,10 @@ header.active {
   position: relative;
 }
 
+.con02 .work_list li a .img_box img {
+  transition: 0.3s;
+}
+
 .con02 .work_list li a .img_box::before {
   content: "";
   width: 168px;
@@ -338,6 +342,10 @@ header.active {
   height: 168px;
 }
 
+.con02 .work_list li a:hover .img_box img {
+  filter: brightness(50%);
+}
+
 /* con03 */
 .con03 {
   width: 100%;
@@ -370,7 +378,7 @@ header.active {
 
 .con03 .btn_wrap {
   position: absolute;
-  right: -50%;
+  right: 50%;
   top: 60%;
   z-index: 3;
 }
@@ -458,6 +466,138 @@ header.active {
   animation-duration: 1.8s;
 }
 
+/* con04 */
+.con04 {
+  padding: 50px 0;
+}
+
+.con04 .inner {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.con04 .content_wrap {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+.con04 .content_wrap img {
+  filter: brightness(50%);
+  width: 100%;
+}
+.con04 .content_wrap h1.en {
+  font-family: "kanit", sans-serif;
+  font-weight: 600;
+}
+.con04 .content_wrap h1.en2 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+}
+
+.con04 .content_wrap h1 {
+  font-size: 160px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+  width: 60%;
+  font-weight: 400;
+  line-height: 1;
+  opacity: 0;
+}
+
+.con04 .content_wrap h1 span {
+  display: block;
+  letter-spacing: -2px;
+  font-size: 80px;
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+}
+
+.con04 .info_wrap .inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.con04 .info_wrap .inner .obj {
+  width: 70%;
+}
+
+.con04 .info_wrap .inner .obj img {
+  width: 100%;
+}
+
+.con04 .info_wrap .inner .text_box {
+  width: 25%;
+}
+
+.con04 .info_wrap .inner .text_box span {
+  display: block;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.con04 .info_wrap .inner .text_box span.title {
+  font-weight: 500;
+  color: #7851a9;
+  text-transform: uppercase;
+}
+
+.con04 .info_wrap .inner .text_box .text {
+  margin-bottom: 30px;
+}
+
+.con04 .obj {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.con04 .obj::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.8s;
+  transition-delay: 0.4s;
+  z-index: 2;
+}
+
+.con04 .obj::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.8s;
+  z-index: 3;
+}
+
+.con04 .obj.active::before,
+.con04 .obj.active::after {
+  height: 0;
+}
+
+.con04 .text_box span {
+  margin: 50px 0;
+  transition: all 0.8s;
+  opacity: 0;
+}
+
+.con04 .text_box.active span {
+  margin: 0;
+  opacity: 1;
+}
+
 /* footer */
 footer {
   width: 100%;
@@ -507,4 +647,276 @@ footer .bottom .sns {
 
 footer .bottom .sns li {
   margin-right: 30px;
+}
+
+/* 1650px */
+@media screen and (max-width: 1650px) {
+  .visual .svgAni {
+    top: 17%;
+  }
+  .visual .sub_text {
+    margin-left: 10%;
+  }
+
+  .con03.motion .btn_wrap {
+    right: 10%;
+  }
+}
+
+/* 1025px ~ 1300px */
+@media screen and (max-width: 1300px) {
+  .visual .mainText {
+    font-size: 11vw;
+    width: 100%;
+  }
+
+  .visual .svgAni {
+    top: 50%;
+    width: 56%;
+  }
+
+  .visual .sub_text {
+    margin-left: 0;
+    width: 100%;
+    padding: 0 5%;
+    position: absolute;
+    left: 0;
+    bottom: 8%;
+  }
+  .con01 {
+    margin-top: 20vw;
+  }
+  .con01 .title h2 {
+    font-size: 3.13em;
+  }
+  footer .text_wrap a {
+    font-size: 100px;
+  }
+  .con02 .title {
+    font-size: 9.38em;
+  }
+  .con03 .text_wrap ul li {
+    font-size: 6.25em;
+  }
+  footer .text_wrap {
+    font-size: 8.75em;
+  }
+  footer .bottom {
+    font-size: 1.25em;
+  }
+}
+
+/* 801px ~ 1024px */
+@media screen and (max-width: 1024px) {
+  .visual .main_text {
+    font-size: 6.25em;
+  }
+  .visual .svgAni {
+    top: 40%;
+    width: 69%;
+  }
+  .con02 .work_list {
+    width: 90%;
+  }
+  .con03 .text_wrap {
+    width: 85%;
+  }
+}
+
+/* 501px ~ 800px */
+@media screen and (max-width: 800px) {
+  .wrap {
+    font-size: 1em;
+  }
+  header {
+    padding: 3% 5%;
+  }
+  header .menu_open {
+    display: block;
+    position: relative;
+    width: 32px;
+    height: 10px;
+    margin-top: 10px;
+    transition: top 0.5s;
+    z-index: 11;
+  }
+  header .menu_open span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    transition: 0.3s;
+  }
+  header .menu_open .txt_a {
+    top: 0;
+  }
+  header .menu_open .txt_b {
+    bottom: 0;
+  }
+  .gnb {
+    position: fixed;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background: #fff;
+    left: 0;
+    top: -100%;
+    color: #000;
+    z-index: 10;
+    transition: top 0.5s;
+  }
+
+  .gnb ul {
+    display: block;
+    width: 80%;
+    margin: 20% auto;
+  }
+  .gnb ul li {
+    margin-left: 0;
+  }
+  .gnb ul li a .char {
+    color: #000;
+    overflow: inherit;
+  }
+  .gnb ul li a {
+    font-size: 6.25em;
+    line-height: 1.4;
+    letter-spacing: -1px;
+  }
+  .gnb ul li:nth-child(2) a {
+    font-family: "Cormorant Infant", serif;
+  }
+  .gnb ul li a .char::before,
+  .gnb ul li a .char::after {
+    display: none;
+  }
+
+  /* menu_open 이벤트 */
+  .gnb.on {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+  }
+  body.on {
+    overflow: hidden;
+  }
+  header .menu_open.on span.txt_a {
+    background: #000;
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  header .menu_open.on span.txt_b {
+    background: #000;
+    transform: rotate(-45deg) translate(2px, -1px);
+  }
+  .con01 .title h2 {
+    font-size: 1.88em;
+  }
+  .visual .svgAni {
+    left: 0;
+    width: 39%;
+  }
+  .con02 .work_list li {
+    width: 100%;
+  }
+  .con02 .work_list li a .img_box::before,
+  .con02 .work_list li a .img_box::after {
+    display: none;
+  }
+  .con02 .title {
+    font-size: 7.38em;
+  }
+  .con02 .work_list li {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .con02 .work_list li a .text_box h3 {
+    font-size: 1.75em;
+  }
+  .con03 .btn_wrap a {
+    width: 90px;
+    height: 90px;
+  }
+  .con03 .btn_wrap a::before {
+    display: none;
+  }
+  .con03 .btn_wrap a:hover {
+    border-color: #fff;
+  }
+  .con03 .btn_wrap a img:nth-child(2) {
+    display: none;
+  }
+  .con03 .loop_list .list li {
+    width: 200px;
+  }
+  .con03 .loop_list .list li img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .con03 .text_wrap ul li {
+    font-size: 5.25em;
+  }
+  footer {
+    height: 50vh;
+  }
+  footer .text_wrap {
+    font-size: 4em;
+    padding: 0 30px;
+    top: 22%;
+  }
+  footer .text_wrap a {
+    font-size: 1em;
+  }
+  footer .text_wrap .title {
+    padding-left: 0;
+  }
+}
+
+/* 401px ~ 500px */
+@media screen and (max-width: 500px) {
+  br.mo {
+    display: none;
+  }
+  .visual {
+    padding-top: 100px;
+  }
+  .visual .svgAni {
+    width: 100%;
+    right: 0;
+    top: 30%;
+  }
+  .visual.motion .main_text {
+    margin: 0 0 150px 25px;
+    font-size: 3.25em;
+  }
+  .visual .sub_text {
+    bottom: 10%;
+  }
+  .con01 .title h2 {
+    font-size: 1.2em;
+  }
+  .con03 .text_wrap ul li {
+    font-size: 4.25em;
+  }
+  .con03 .text_wrap ul li.en2 {
+    padding-left: 10px;
+  }
+  footer .text_wrap {
+    font-size: 3em;
+  }
+  footer .bottom {
+    font-size: 1em;
+    padding: 0 30px;
+  }
+  footer .bottom .sns li {
+    margin-left: 10px;
+  }
+}
+
+/* 301px ~ 400px */
+@media screen and (max-width: 400px) {
+  footer .text_wrap {
+    font-size: 2em;
+  }
 }
