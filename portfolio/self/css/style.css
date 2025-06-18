@@ -35,7 +35,7 @@ body {
 .sc_text_sticky {
   position: relative;
   width: 100%;
-  height: 800vh;
+  height: 700vh;
 }
 
 .sc_text_sticky .wrap {
@@ -134,7 +134,8 @@ body {
   font-family: "Ancizar Serif", serif;
 }
 
-.sc_text_sticky .text_wrap p.top {}
+.sc_text_sticky .text_wrap p.top {
+}
 
 .sc_text_sticky .text_wrap p.center {
   color: #effe97;
@@ -142,26 +143,34 @@ body {
   font-size: 72px;
 }
 
-.sc_text_sticky .text_wrap p.bottom {}
-
+.sc_text_sticky .text_wrap p.bottom {
+}
 
 /* sc_intro */
 .sc_intro {
   background: #000;
 }
 
-.sc_intro .top_wrap {}
+.sc_intro .top_wrap {
+}
 
-.sc_intro .top_wrap .left_wrap {}
+.sc_intro .top_wrap .left_wrap {
+}
 
-.sc_intro .top_wrap .right_wrap {}
+.sc_intro .top_wrap .right_wrap {
+}
 
-.sc_intro .bottom_wrap {}
+.sc_intro .bottom_wrap {
+}
 
-.sc_intro .bottom_wrap .text_wrap {}
+.sc_intro .bottom_wrap .text_wrap {
+}
 
-.sc_intro .bottom_wrap .text_wrap p.top {}
+.sc_intro .bottom_wrap .text_wrap p.top {
+}
 
-.sc_intro .bottom_wrap .text_wrap p.center {}
+.sc_intro .bottom_wrap .text_wrap p.center {
+}
 
-.sc_intro .bottom_wrap .text_wrap p.bottom {}
+.sc_intro .bottom_wrap .text_wrap p.bottom {
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>K.seoa-portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -15,9 +15,9 @@
         </a>
         <nav class="gnb en">
           <ul>
-            <li><a href="#" data-splitting>About</a></li>
-            <li><a href="#" data-splitting>Work</a></li>
-            <li><a href="#" data-splitting>Contact</a></li>
+            <li><a href="#about" data-splitting>About</a></li>
+            <li><a href="#work" data-splitting>Work</a></li>
+            <li><a href="#contact" data-splitting>Contact</a></li>
           </ul>
         </nav>
         <a href="#" class="menu_open">
@@ -28,8 +28,8 @@
 
       <section class="visual en animate" data-animate="motion">
         <div class="main_text">
-          <p><span>Publisher - Front</span></p>
-          <p class="en2 purple"><span>Kwon Seoa</span></p>
+          <p><span>Publisher</span></p>
+          <p class="en2 gray"><span>Kwon Seoa</span></p>
           <p><span>Portfolio</span></p>
         </div>
         <div class="sub_text">
@@ -86,10 +86,10 @@
           </h2>
         </div>
       </section>
-      <section class="con02">
+      <section class="con02" id="work">
         <div class="title en">
           <p class="txt_a">My</p>
-          <p class="txt_b en2 purple">Work</p>
+          <p class="txt_b en2">Work</p>
         </div>
         <ul class="work_list">
           <li>
@@ -322,33 +322,40 @@
       <section class="con04">
         <div class="content_wrap">
           <img src="img/content.png" alt="" />
-          <h1 class="en"><span>Publisher & Front</span>My portfolio</h1>
+          <h2 class="en"><span>Publisher</span>My portfolio</h2>
         </div>
         <div class="info_wrap">
           <div class="inner">
             <div class="obj">
-              <img src="임시/img_2.jpg" alt="" />
+              <a href="./portfolio/self/index.html" target="_blank">
+                <img src="./portfolio/self/img/visual_1.png" alt="" />
+              </a>
             </div>
             <div class="text_box">
-              <span class="title en">recommended destination</span>
-              <span class="text">Thailand</span>
-              <span class="title en">Travel eriod</span>
-              <span class="text">5 days 3 nights</span>
-              <span class="title en">visiting city</span>
-              <span class="text">Incheon > Bangkok > Pattaya > Incheon</span>
-              <span class="title en">transportation</span>
-              <span class="text">Korean Air, Jeju Air, Asiana Airlines</span>
-              <span class="title en">suggestion! Pattaya</span>
+              <span class="title en">📂 사이트명</span>
+              <span class="text"
+                >velotti 개인 프로젝트 | 1인 작업 퍼블리싱 프로젝트</span
+              >
+              <span class="title en">🎨 사용 언어</span>
+              <span class="text">HTML5, CSS3, js</span>
+              <span class="title en">⚡ 사용 라이브러리</span>
+              <span class="text">jquery, gsap, lenis</span>
+              <span class="title en">💻 유형</span>
+              <span class="text">PC 적응형</span>
+              <span class="title en">✅ Check Point</span>
               <span class="text">
-                Located on the eastern side of the Gulf of Thailand, Pattaya is
-                known as the “Hawaii of the East” for its sunny beaches,
-                beautiful beaches and delicious seafood. The 15-kilometer-long
-                coastline with lapping crystal-clear waters is a favorite
-                tourist destination for sunbathers and beaches for aficionados
-                from around the world. Water sports are also plentiful, and jet
-                skiing, parasailing and diving are a must-try if you are
-                traveling here.
+                ① wrapper에 position: sticky를 적용하고, 내부 요소들은 position:
+                absolute로 각각 원하는 위치에 배치한 뒤, z-index로 노출 순서를
+                설정했습니다. 이후 GSAP을 활용해 각 요소의 위치, 높이 등을
+                순차적으로 조절하여 애니메이션을 구현했습니다.
               </span>
+
+              <a
+                href="./portfolio/self/index.html"
+                class="go-btn"
+                target="_blank"
+                >👉 아직 제작중입니다.. 그렇지만 보러가기</a
+              >
             </div>
           </div>
         </div>
@@ -358,7 +365,7 @@
           <p class="title">Want to <span class="en2">Work Together?</span></p>
           <p class="contact en2">Contact</p>
           <!-- <p class="purple"><a href="mailto:ed86@daum.net">ed86@daum.net</a></p> -->
-          <p class="purple"><a href="mailto:ed86@daum.net">010-9701-9327</a></p>
+          <p class="gray"><a href="mailto:ed86@daum.net">010-9701-9327</a></p>
         </div>
         <div class="bottom en">
           <ul class="sns">
@@ -369,6 +376,7 @@
       </footer>
     </div>
 
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="plugin/splitting.min.js"></script>
     <script src="plugin/scrolla.jquery.min.js"></script>

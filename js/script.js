@@ -1,4 +1,15 @@
 $(function () {
+  // 부드러운 스크롤을 위한 lenis 사용
+  const lenis = new Lenis();
+  // lenis.on("scroll", (e) => {
+  //   console.log(e);
+  // });
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
   $(document).on("click", 'a[href="#"]', function (e) {
     e.preventDefault();
   });
@@ -103,6 +114,7 @@ $(function () {
       { backgroundColor: "#000", color: "#fff", ease: "none", duration: 5 },
       0
     )
+    .to(".con02 .title", { color: "#333" })
     // title 픽스
     .to(".con02 .title", {
       position: "fixed",
@@ -133,7 +145,7 @@ $(function () {
         start: "100% 50%",
         end: "100% 0%",
         scrub: 1,
-        markers: true,
+        // markers: true,
       },
     })
     .to(".con02 .title .txt_a", { x: "-100%", ease: "none", duration: 5 }, 0)
@@ -204,10 +216,10 @@ $(function () {
         end: "100% 0%",
         scrub: 1,
         pin: true,
-        markers: true,
+        // markers: true,
       },
     })
-    .to(".content_wrap h1", { opacity: "1", ease: "none", duration: "10" }, 5)
+    .to(".content_wrap h2", { opacity: "1", ease: "none", duration: "10" }, 5)
     .to(
       ".content_wrap img",
       { scale: "0.4", ease: "none", duration: "10", opacity: "0.3" },
@@ -235,7 +247,7 @@ $(function () {
         end: "100% 0%",
         toggleClass: { targets: txt, className: "active" },
         scrub: 1,
-        markers: true,
+        // markers: true,
       },
     });
   });
