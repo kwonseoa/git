@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Fjalla+One&family=Lilita+One&family=Noto+Sans+KR:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="sc_text_sticky">
+      <div class="wrap">
+        <div class="bg bg1"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        <div class="bg bg4"></div>
+        <div class="gradiant"></div>
+        <div class="text_wrap">
+          <p class="top">Velotti® – The Art of Standing Out</p>
+          <p class="center">NEW YORK</p>
+          <p class="bottom">A contemporary fashion brand based in New York</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc_intro">
+      <div class="wrap">
+        <div class="top_wrap">
+          <div class="left_wrap">
+            <h2>
+              designed for <br />
+              those who dare <br />
+              to stand out.
+            </h2>
+          </div>
+          <div class="right_wrap">
+            <p>
+              With bold styles, dynamic shapes, <br />
+              and vibrant colors, <br />
+              this brand redefines fashion as an art <br />
+              that reflects individuality and confidence.
+            </p>
+          </div>
+        </div>
+        <div class="bottom_wrap">
+          <div class="text_wrap">
+            <p class="top">Inspired</p>
+            <p class="center">by urban energy</p>
+            <p class="bottom">and visual innovation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc_content01">
+      <div class="top">
+        <p class="top_left">
+          designed for <br />
+          those who dare <br />
+          to stand out.
+        </p>
+        <p class="top_right">
+          With bold styles, dynamic shapes, <br />
+          and vibrant colors, <br />
+          this brand redefines fashion as an art <br />
+          that reflects individuality and confidence.
+        </p>
+      </div>
+      <div class="bottom">
+        <div class="bar_top"></div>
+        <p>
+          <span>If you</span>
+          <span> want to prove your worth</span>
+          <span>anyone can.</span>
+        </p>
+        <div class="bar_bottom"></div>
+      </div>
+    </div>
+
+    <div class="sc_content02">
+      <div class="sticky_wrap">
+        <p>
+          designed for <br />
+          those who dare <br />
+          to stand out.
+        </p>
+      </div>
+      <div class="right">
+        <div class="obj"><img src="img/content01_01.jpg" alt="" /></div>
+        <div class="obj"><img src="img/content01_02.jpg" alt="" /></div>
+        <div class="obj"><img src="img/content01_01.jpg" alt="" /></div>
+      </div>
+    </div>
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- ✅ Lenis CDN 먼저 -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.25/bundled/lenis.min.js"></script>
+
+    <!-- ✅ GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- ✅ Lenis 초기화는 jQuery 밖에서 먼저 실행 -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smooth: true,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+      lenis.on("scroll", ScrollTrigger.update);
+    </script>
+
+    <!-- ✅ 그 다음에 jQuery 코드 (GSAP, Swiper 등) -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      $(function () {
+        // Swiper
+        new Swiper(".slide_wrap", {
+          loop: true,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          scrollbar: {
+            el: ".swiper-scrollbar",
+          },
+        });
+
+        // ScrollTrigger - 텍스트 스틱키
+        var sc_text_sticky = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".sc_text_sticky",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1,
+            pin: ".sc_text_sticky .wrap",
+          },
+        });
+
+        sc_text_sticky
+          .to(".sc_text_sticky .bg1", { height: 0 })
+          .to(".sc_text_sticky .bg2", { height: 0 })
+          .to(".sc_text_sticky .bg3", { height: 0 })
+          .to(".sc_text_sticky .gradiant", { opacity: 1 })
+          .to(".sc_text_sticky .text_wrap", { opacity: 1 })
+          // top과 bottom이 양쪽으로 날아감
+          .to(
+            ".sc_text_sticky .text_wrap .top",
+            { xPercent: 0, duration: 2, opacity: 0 },
+            "a"
+          )
+          .to(
+            ".sc_text_sticky .text_wrap .bottom",
+            { xPercent: 0, duration: 1, opacity: 0 },
+            "a"
+          )
+
+          // center가 scale 1 → 10까지 커짐
+          .fromTo(
+            ".sc_text_sticky .text_wrap .center",
+            { scale: 1, duration: 5, opacity: 1 },
+            { scale: 30, duration: 5, opacity: 0 },
+            "b"
+          )
+
+          // 커진 후 사라짐
+          // .to(
+          //   ".sc_text_sticky .text_wrap .center",
+          //   { opacity: 0, duration: 0.5 },
+          //   "c"
+          // )
+
+          // 다음 섹션 등장
+          .fromTo(
+            ".sc_intro",
+            { opacity: 0 },
+            { opacity: 1, duration: 1 },
+            "c+=0.5"
+          );
+
+        //ScrollTrigger - 이미지 확대
+        gsap.to(".sc_pin", {
+          scale: 5,
+          scrollTrigger: {
+            trigger: ".section2",
+            start: "center center",
+            end: "bottom bottom",
+            scrub: true,
+            pin: true,
+            markers: true,
+            pinType: "fixed", // lenis 와 gsap 의 혼합으로 인해 생기는 덜커덩거리는 것 없애기
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

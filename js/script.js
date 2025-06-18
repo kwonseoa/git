@@ -140,37 +140,37 @@ $(function () {
     .to(".con02 .title .txt_b", { x: "100%", ease: "none", duration: 5 }, 0);
 
   // .con02와 .work_list 구간에서 title 글자 display 관리
-  ScrollTrigger.create({
-    trigger: ".con02", // 이 요소가 스크롤 트리거 시작점의 기준이 돼요
-    start: "top bottom", // .con02의 맨 위가 화면 맨 아래에 닿을 때 시작!
-    endTrigger: ".work_list", // 이 요소가 스크롤 트리거 끝점의 기준이 돼요
-    end: "bottom top", // .work_list의 맨 아래가 화면 맨 위에 닿을 때 끝!
+  // ScrollTrigger.create({
+  //   trigger: ".con02", // 이 요소가 스크롤 트리거 시작점의 기준이 돼요
+  //   start: "top bottom", // .con02의 맨 위가 화면 맨 아래에 닿을 때 시작!
+  //   endTrigger: ".work_list", // 이 요소가 스크롤 트리거 끝점의 기준이 돼요
+  //   end: "bottom top", // .work_list의 맨 아래가 화면 맨 위에 닿을 때 끝!
 
-    onEnter: () => {
-      // 스크롤을 내려서 트리거 구간에 진입할 때
-      gsap.set(".con02 .title .txt_a, .con02 .title .txt_b", {
-        display: "block",
-      });
-    },
-    onLeave: () => {
-      // 스크롤을 내려서 트리거 구간을 벗어날 때
-      gsap.set(".con02 .title .txt_a, .con02 .title .txt_b", {
-        display: "none",
-      });
-    },
-    onEnterBack: () => {
-      // 스크롤을 올려서 트리거 구간에 다시 진입할 때
-      gsap.set(".con02 .title .txt_a, .con02 .title .txt_b", {
-        display: "block",
-      });
-    },
-    onLeaveBack: () => {
-      // 스크롤을 올려서 트리거 구간을 완전히 벗어날 때 (맨 위로 갈 때)
-      gsap.set(".con02 .title .txt_a, .con02 .title .txt_b", {
-        display: "none",
-      });
-    },
-  });
+  //   onEnter: () => {
+  //     // 스크롤을 내려서 트리거 구간에 진입할 때
+  //     gsap.set(".con02 .title .txt_a, .con02 .title .txt_b", {
+  //       display: "block",
+  //     });
+  //   },
+  //   onLeave: () => {
+  //     // 스크롤을 내려서 트리거 구간을 벗어날 때
+  //     gsap.set(".con02 .title .txt_a, .con02 .title .txt_b", {
+  //       display: "none",
+  //     });
+  //   },
+  //   onEnterBack: () => {
+  //     // 스크롤을 올려서 트리거 구간에 다시 진입할 때
+  //     gsap.set(".con02 .title .txt_a, .con02 .title .txt_b", {
+  //       display: "block",
+  //     });
+  //   },
+  //   onLeaveBack: () => {
+  //     // 스크롤을 올려서 트리거 구간을 완전히 벗어날 때 (맨 위로 갈 때)
+  //     gsap.set(".con02 .title .txt_a, .con02 .title .txt_b", {
+  //       display: "none",
+  //     });
+  //   },
+  // });
 
   // skill list img 무한루프
   const $list = $(".loop_list .list");

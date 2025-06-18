@@ -1,0 +1,167 @@
+@import "./reset.css";
+
+body {
+  overflow-x: hidden;
+}
+
+.sc_visual {
+  position: relative;
+}
+
+.sc_visual p {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(207, 89, 60);
+}
+
+.sc_text h3 {
+  font-size: 100px;
+}
+
+.sc_pin {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.sc_pin img {
+  width: 100%;
+  height: auto;
+}
+
+.sc_text_sticky {
+  position: relative;
+  width: 100%;
+  height: 800vh;
+}
+
+.sc_text_sticky .wrap {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh;
+}
+
+.sc_text_sticky .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.sc_text_sticky .bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.sc_text_sticky .bg1 {
+  z-index: 3;
+}
+
+.sc_text_sticky .bg2 {
+  z-index: 2;
+}
+
+.sc_text_sticky .bg3 {
+  z-index: 1;
+  /* height: 100vh; */
+}
+
+.sc_text_sticky .bg1::after {
+  background-image: url(../img/visual_1.png);
+}
+
+.sc_text_sticky .bg2::after {
+  background-image: url(../img/visual_2.png);
+}
+
+.sc_text_sticky .bg3::after {
+  background-image: url(../img/visual_3.png);
+}
+
+.sc_text_sticky .bg4::after {
+  background-image: url(../img/visual_4.png);
+}
+
+.sc_text_sticky .bg img {
+  width: 100%;
+  height: auto;
+}
+
+.sc_text_sticky .gradiant {
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+}
+
+.sc_text_sticky .text_wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sc_text_sticky .text_wrap p {
+  font-size: 62px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.4em;
+  font-family: "Ancizar Serif", serif;
+}
+
+.sc_text_sticky .text_wrap p.top {}
+
+.sc_text_sticky .text_wrap p.center {
+  color: #effe97;
+  margin: 80px 0;
+  font-size: 72px;
+}
+
+.sc_text_sticky .text_wrap p.bottom {}
+
+
+/* sc_intro */
+.sc_intro {
+  background: #000;
+}
+
+.sc_intro .top_wrap {}
+
+.sc_intro .top_wrap .left_wrap {}
+
+.sc_intro .top_wrap .right_wrap {}
+
+.sc_intro .bottom_wrap {}
+
+.sc_intro .bottom_wrap .text_wrap {}
+
+.sc_intro .bottom_wrap .text_wrap p.top {}
+
+.sc_intro .bottom_wrap .text_wrap p.center {}
+
+.sc_intro .bottom_wrap .text_wrap p.bottom {}
