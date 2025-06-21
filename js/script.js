@@ -10,9 +10,9 @@ $(function () {
   }
   requestAnimationFrame(raf);
 
-  $(document).on("click", 'a[href="#"]', function (e) {
-    e.preventDefault();
-  });
+  // $(document).on("click", 'a[href="#"]', function (e) {
+  //   e.preventDefault();
+  // });
 
   // gnb 스플리팅 호출
   Splitting();
